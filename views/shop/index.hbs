@@ -1,0 +1,27 @@
+
+{{!-- {{#each products}}
+ products
+{{/each}} --}}
+   {{!-- <div style="margin-left: 50px;">
+
+<div style="height: 100px;width:100px;,background-color:red">
+   <img src="https://image.shutterstock.com/image-photo/hand-drawing-conceptual-diagram-about-600w-1351466543.jpg">
+</div>
+<h3 style="text-decoration: black,font-weight:bold;">groocery </h3>
+<p>this is the best product</p>
+<div style="display: flex;flex-direction:row;  justify-content: space-between;"><a href="#"></a><button type="button" class="btn btn-primary">Add to cart</button><h2>$13</h2></div>
+
+  </div> --}}
+{{#each products}}
+
+
+ <div style="height:auto;width:350px;background-color:palevioletred;border-width:20px;border-color:black;margin-bottom:30px">
+ 
+  <img src="https://image.shutterstock.com/image-photo/hand-drawing-conceptual-diagram-about-600w-1351466543.jpg" style="height: 300px;width:300px;object-fit:contain;justify-content:start;margin-left:20px;">
+  <div>
+     <h1 style="color: white;">{{this.title}}</h1>
+     <p>{{this.description}}</p>
+  </div>
+  <div style="display: flex;flex-direction:row;  justify-content: space-between;"><a href="/add-to-cart/{{this._id}}"><button type="button" class="btn btn-success">Add to cart</button></a><h2 style="color:white;">${{this.price}}</h2></div>
+ </div>
+{{/each}}
